@@ -15,7 +15,7 @@
             userInput = prompt("Please input a number: ");
         } while (isNaN(userInput) || userInput.trim() === "");
 
-        var numInput = parseInt(userInput);
+        var numInput = Number(userInput);
 
         showInput.innerHTML = "Number inputted: " + numInput;
 
