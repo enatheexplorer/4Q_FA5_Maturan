@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Q_FA5_1_Maturan</title>
+</head>
+<body>
+    <h4 id="showInput"></h4>
+    <p id="output"></p>
+
+    <script>
+        var userInput;
+        do {
+            userInput = prompt("Please input a number: ");
+        } while (isNaN(userInput) || userInput.trim() === "");
+
+        var numInput = parseInt(userInput);
+
+        showInput.innerHTML = "Number inputted: " + numInput;
+
+        if ((numInput%2)!=0){
+            for (var counter = numInput; counter >= 1; counter--){
+                for (var counterTwo = numInput; counterTwo >= 1; counterTwo--){
+                    output.innerHTML += counter + " ";
+                }
+                output.innerHTML += "<br/>";
+            }
+        } else {
+            for (var counter = numInput; counter >= 1; counter--){
+                for (var counterTwo = counter; counterTwo >= 1; counterTwo--){
+                    output.innerHTML += counter + " ";
+                }
+                output.innerHTML += "<br/>";
+            }
+        }
+    </script>
+</body>
+</html>

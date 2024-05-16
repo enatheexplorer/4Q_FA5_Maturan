@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Q_FA5_2_Maturan</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <input type="text" id="contact">
+        <button onclick="add()">Add</button>
+        <button onclick="remove()">Remove</button><br>
+        <p id="contactList"></p>
+    </form>
+    <script>
+        var personList = [];
+
+        function add(){
+            var addPerson = document.getElementById("contact").value;
+            if (personList.length==7){
+                personList.shift();
+            }
+            
+            personList.push(addPerson);
+            contactList.innerHTML = personList.join(" ");
+            return false;
+        }
+
+        function remove(){
+            personList.pop();
+            contactList.innerHTML = personList.join(" ");
+            return false;
+        }
+    </script>
+</body>
+</html>
