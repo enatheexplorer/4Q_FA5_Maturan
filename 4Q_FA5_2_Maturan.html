@@ -17,17 +17,24 @@
 
         function add(){
             var addPerson = document.getElementById("contact").value;
+            if (addPerson === "") {
+                alert("Please enter a contact name.");
+                return false;
+            }
+
             if (personList.length==7){
                 personList.shift();
             }
             
             personList.push(addPerson);
+            contact.value = "";
             contactList.innerHTML = personList.join(" ");
             return false;
         }
 
         function remove(){
             personList.pop();
+            contact.value = "";
             contactList.innerHTML = personList.join(" ");
             return false;
         }
